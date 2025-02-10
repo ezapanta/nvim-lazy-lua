@@ -7,26 +7,26 @@ return {
 
 		conform.setup({
 			formatters_by_ft = {
-				javascript = { "prettier" },
-				typescript = { "prettier" },
-				javascriptreact = { "prettier" },
-				typescriptreact = { "prettier" },
-				svelte = { "prettier" },
-				css = { "prettier" },
-				json = { "prettier" },
-				yaml = { "prettier" },
-				markdown = { "prettier" },
-				graphql = { "prettier" },
+				javascript = { "prettierd" },
+				typescript = { "prettierd" },
+				javascriptreact = { "prettierd" },
+				typescriptreact = { "prettierd" },
+				svelte = { "prettierd" },
+				css = { "prettierd" },
+				json = { "prettierd" },
+				yaml = { "prettierd" },
+				markdown = { "prettierd" },
+				graphql = { "prettierd" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
-				sass = { "prettier" },
-				scss = { "prettier" },
-				html = { "prettier" },
+				sass = { "prettierd" },
+				scss = { "prettierd" },
+				html = { "prettierd" },
 			},
-			format_on_save = {
+			format_after_save = {
 				lsp_fallback = true,
-				async = false,
-				timeout_ms = 1000,
+				async = true,
+				timeout = 1000,
 			},
 		})
 
@@ -34,7 +34,7 @@ return {
 			conform.format({
 				lsp_fallback = true,
 				async = false,
-				timeout_ms = 1000,
+				timeout = 1000,
 			})
 		end, { desc = "Format file or range (in visual mode)" })
 	end,

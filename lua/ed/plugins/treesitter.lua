@@ -13,6 +13,7 @@ return {
 
 			-- configure treesitter
 			treesitter.setup({ -- enable syntax highlighting
+				enable_autocmd = false,
 				highlight = {
 					enable = true,
 				},
@@ -52,7 +53,6 @@ return {
 						node_decremental = "<bs>",
 					},
 				},
-				enable_autocmd = false,
 			})
 		end,
 	},
