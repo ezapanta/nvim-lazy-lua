@@ -4,11 +4,7 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		-- fork off of nvim-telescope for apple sillicon
-<<<<<<< HEAD
-		{ "lucasfcosta//telescope-fzf-native.nvim", build = "make" },
-=======
 		{ "lucasfcosta/telescope-fzf-native.nvim", build = "make" },
->>>>>>> b6bd0ea (adjust for lspconfig v3 and fix fuzzy finder)
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
@@ -27,11 +23,6 @@ return {
 					},
 				},
 			},
-<<<<<<< HEAD
-		})
-
-		telescope.load_extension("fzf")
-=======
 			extensions = {
 				fzf = {
 					fuzzy = true, -- false will only do exact matching
@@ -42,9 +33,6 @@ return {
 				},
 			},
 		})
-
-		-- telescope.load_extension("fzf")
->>>>>>> b6bd0ea (adjust for lspconfig v3 and fix fuzzy finder)
 
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
