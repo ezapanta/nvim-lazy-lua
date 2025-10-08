@@ -22,6 +22,7 @@ return {
 				sass = { "prettier" },
 				scss = { "prettier" },
 				html = { "prettier" },
+				ruby = { "prettier" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
