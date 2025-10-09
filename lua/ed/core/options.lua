@@ -29,7 +29,10 @@ opt.signcolumn = "yes"
 opt.backspace = "indent,eol,start"
 
 -- clipboard
-opt.clipboard:append("unnamedplus")
+-- Mac
+-- opt.clipboard:append("unnamedplus")
+-- Windows
+opt.clipboard:append("unnamed")
 
 -- split windows
 opt.splitright = true
