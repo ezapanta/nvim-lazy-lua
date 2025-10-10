@@ -7,7 +7,7 @@ opt.number = true
 -- tabs & indentation
 opt.tabstop = 2
 opt.shiftwidth = 2
-opt.expandtab = true 
+opt.expandtab = true
 opt.autoindent = true
 
 -- line wrapping
@@ -30,7 +30,7 @@ opt.backspace = "indent,eol,start"
 
 -- clipboard
 -- Mac
--- opt.clipboard:append("unnamedplus")
+-- opt.clipboard("unnamedplus")
 -- Windows
 opt.clipboard:append("unnamed")
 
