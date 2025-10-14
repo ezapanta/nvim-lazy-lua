@@ -13,7 +13,7 @@ return {
 
 		local mason_tool_installer = require("mason-tool-installer")
 
-		-- enable mason and configure icons
+		-- enable mason and configure icon
 		mason.setup({
 			ui = {
 				icons = {
@@ -37,6 +37,7 @@ return {
 				"emmet_ls",
 				"prismals",
 				"pyright",
+				"ruby_lsp",
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true, -- not the same as ensure_installed
@@ -50,6 +51,7 @@ return {
 				-- "black",    -- python formatter
 				-- "pylint",   -- python linter
 				"eslint_d", -- js linter
+				"rubocop", -- ruby formatter/linter
 			},
 		})
 	end,

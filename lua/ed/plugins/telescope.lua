@@ -2,9 +2,9 @@ return {
 	"nvim-telescope/telescope.nvim",
 	branch = "0.1.x",
 	dependencies = {
+		-- fork for apple silicon { "lucasfcosta/telescope-fzf-native.nvim", build = "make" },
 		"nvim-lua/plenary.nvim",
-		-- fork off of nvim-telescope for apple sillicon
-		{ "lucasfcosta/telescope-fzf-native.nvim", build = "make" },
+		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
@@ -12,7 +12,6 @@ return {
 		local actions = require("telescope.actions")
 
 		telescope.setup({
-
 			defaults = {
 				path_display = { "truncate " },
 				mappings = {
@@ -33,6 +32,8 @@ return {
 				},
 			},
 		})
+
+		telescope.load_extension("fzf")
 
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
