@@ -153,5 +153,9 @@ return {
 				},
 			},
 		})
+
+		lspconfig("ruby_lsp", {
+			capabilities = capabilities,
+		})
 	end,
 }

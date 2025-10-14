@@ -51,6 +51,7 @@ return {
 				-- "black",    -- python formatter
 				-- "pylint",   -- python linter
 				"eslint_d", -- js linter
+				"rubocop", -- ruby formatter/linter
 			},
 		})
 	end,
