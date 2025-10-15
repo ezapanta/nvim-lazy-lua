@@ -154,7 +154,7 @@ return {
 			},
 		})
 
-		lspconfig("ruby_lsp", {
+		lspconfig("rubocop", {
 			capabilities = capabilities,
 		})
 	end,
