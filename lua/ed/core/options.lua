@@ -28,14 +28,35 @@ opt.signcolumn = "yes"
 -- backspace
 opt.backspace = "indent,eol,start"
 
--- clipboard
--- Mac
--- opt.clipboard("unnamedplus")
--- Windows
-opt.clipboard:append("unnamed")
-
 -- split windows
 opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("-")
+
+-- clipboard
+-- Mac
+-- opt.clipboard("unnamedplus")
+-- Windows
+-- opt.clipboard:append("unnamed")
+-- Ubuntu on Windows Terminal/WSL
+vim.g.clipboard = {
+	name = "WslClipboard",
+	copy = {
+		["+"] = "clip.exe",
+		["*"] = "clip.exe",
+	},
+	paste = {
+		["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+		["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+	},
+	-- copy = {
+	-- 	["+"] = { "xclip", "-quiet", "-i", "-selection", "clipboard" },
+	-- 	["*"] = { "xclip", "-quiet", "-i", "-selection", "primary" },
+	-- },
+	-- paste = {
+	-- 	["+"] = { "xclip", "-quiet", "-i", "-selection", "clipboard" },
+	-- 	["*"] = { "xclip", "-quiet", "-i", "-selection", "primary" },
+	-- },
+	cache_enabled = 1, -- must be done or else it hangs
+}
